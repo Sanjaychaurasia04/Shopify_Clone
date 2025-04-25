@@ -45,7 +45,7 @@ Once the server starts, open the app at http://localhost:3000.
 @vitejs/plugin-react-swc – Uses SWC for enhanced performance
 
 
-#📦 Deployment
+# 📦 Deployment
 
 View the live demo of the project hosted on Vercel:
 Shopify Clone - Live Demo(https://shopify-clone-orcin.vercel.app/)
