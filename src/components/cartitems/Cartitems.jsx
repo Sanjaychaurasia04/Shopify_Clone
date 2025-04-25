@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import "./CartItems.css"
+import "./Cartitems.css"
 //import remove_icon from "../../assets/remove.webp"
 import { ShopContext } from '../Context/ShopContext'
 
