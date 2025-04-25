@@ -8,11 +8,15 @@ A simple and responsive Shopify Clone built with React, Vite, and CSS. This proj
 ##🚀 Getting Started
 1. Clone the Repository
 To get started, clone the repository:
+
 git clone https://github.com/sanjaychaurasia04/shopify-clone.git
+
 cd shopify-clone
 
 3. Install Dependencies
+   
 Use npm or yarn to install the necessary dependencies:
+
 
 npm install
 
@@ -21,6 +25,7 @@ Run the development server using the command:
 npm run dev
 
 Once the server starts, open the app at http://localhost:3000.
+
 
 ##🛠️ Features
 
