@@ -5,7 +5,8 @@ A simple and responsive Shopify Clone built with React, Vite, and CSS. This proj
 
 🔗 Live Demo:Shopify(https://shopify-clone-orcin.vercel.app/)
 
-##🚀 Getting Started
+# 🚀 Getting Started
+
 1. Clone the Repository
 To get started, clone the repository:
 
@@ -27,7 +28,7 @@ npm run dev
 Once the server starts, open the app at http://localhost:3000.
 
 
-##🛠️ Features
+# 🛠️ Features
 
 
 ⚡ React + Vite for fast development
@@ -38,13 +39,14 @@ Once the server starts, open the app at http://localhost:3000.
 🔁 Hot Module Replacement (HMR) for instant updates
 
 
-##🧩 Vite Plugins Used
+# 🧩 Vite Plugins Used
 
 @vitejs/plugin-react – Uses Babel for Fast Refresh
 @vitejs/plugin-react-swc – Uses SWC for enhanced performance
 
 
-##📦 Deployment
+#📦 Deployment
+
 View the live demo of the project hosted on Vercel:
 Shopify Clone - Live Demo(https://shopify-clone-orcin.vercel.app/)
 
