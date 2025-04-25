@@ -1,0 +1,33 @@
+/* Popular.css */
+
+.popular {
+    background: linear-gradient(180deg, #e6abdb, #37607c22 60%);
+    width: 100%;
+    padding: 6% 5%;
+    box-sizing: border-box;
+  }
+  
+  .popular h1 {
+    color: #171717;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .popular hr {
+    width: 200px;
+    height: 4px;
+    margin: 0 auto 50px auto;
+    border: none;
+    border-radius: 10px;
+    background: #252525;
+  }
+  
+  .popular-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  

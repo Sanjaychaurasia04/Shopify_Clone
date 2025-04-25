@@ -1,0 +1,23 @@
+.shop-category {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .shop-category img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .allimagesbycategory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+  }
+  

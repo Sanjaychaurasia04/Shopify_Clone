@@ -1,0 +1,139 @@
+.Productdispaly {
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .productdixplay-left {
+    display: flex;
+    
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .productdixplay-left img {
+    cursor: pointer;
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .productdixplay-left img:hover {
+    transform: scale(1.05);
+  }
+  
+  .productdixplay-right {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main_image img {
+    border-radius: 10px;
+    justify-content: center;
+    
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-top: 15px;
+  }
+  
+  .star_price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .star_icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .star_icon img {
+    height: 20px;
+  }
+  
+  .star_icon p {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .price {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .old_price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .new_price {
+    color: #e60023;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .product-description {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .select-size h1 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .display-size {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .display-size div {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+  }
+  
+  .display-size div:hover {
+    background-color: #e0e0e0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #cc001f;
+  }
+  
