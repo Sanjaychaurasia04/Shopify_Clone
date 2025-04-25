@@ -1,108 +1,177 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  .navbar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: beige;
+  padding: 10px 20px;
+  position: relative;
+  border-bottom: 2px solid black;
+  z-index: 1000;
+}
+
+.logoimage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoimage img {
+  height: 40px;
+  width: 40px;
+}
+
+.logoimage p {
+  font-size: 24px;
+  font-weight: 900;
+  color: #333;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #000;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin-left: 30px;
+}
+
+.list li {
+  font-weight: 600;
+  position: relative;
+  padding: 8px 12px;
+}
+
+.list li hr {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: crimson;
+  border: none;
+  border-radius: 4px;
+}
+
+.list a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  background-color: burlywood;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e2be91;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.zero {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
-    width: 100%;
-    padding: 0 2vw;
-    background-color: beige;
-    border-bottom: 2px solid black;
   }
-  
-  .logoimage {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logoimage img {
-    height: 40px;
-    width: 40px;
-    object-fit: contain;
-  }
-  
-  .logoimage p {
-    font-weight: 900;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .list {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-  }
-  
-  .list li {
-    position: relative;
-    padding: 10px 15px;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: background 0.2s ease;
-  }
-  
-  .list li:hover {
-    background-color: rgba(231, 177, 98, 0.3);
-  }
-  
-  .list li hr {
+
+  .nav-links {
     position: absolute;
-    bottom: -8px;
+    top: 65px;
     left: 0;
     width: 100%;
-    height: 3px;
-    border: none;
-    background-color: crimson;
-    border-radius: 5px;
+    background-color: beige;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    display: none;
+    border-top: 1px solid #ccc;
   }
-  
-  .login {
+
+  .nav-links.active {
     display: flex;
-    align-items: center;
   }
-  
-  .login button {
-    padding: 8px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: burlywood;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s ease;
+
+  .list {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 15px;
   }
-  
-  .login button:hover {
-    background-color: #e2be91;
+
+  .list li {
+    width: 100%;
+    padding: 10px 0;
   }
-  
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .login-btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .cart {
-    display: flex;
-    align-items: center;
-    position: relative;
+    align-self: flex-start;
   }
-  
-  .cart img {
-    height: 30px;
-    width: auto;
-    cursor: pointer;
-  }
-  
-  .zero {
-    position: absolute;
-    top: -8px;
-    right: -12px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 2px 6px;
-    border-radius: 50%;
-  }
-  
+}
