@@ -1,38 +1,65 @@
-import React from 'react'
-import "./Navbar.css"
-import { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 import cart from '../assets/cart.jpeg';
-import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-    const [menu ,setMenu] =useState("home");
+  const [menu, setMenu] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <div>
-        <div className="navbar">
-            <div className="logoimage">
-                <img src={logo} alt="logo.jpg" />
-                <p>Shopify</p>
-            </div>
-            <ul className='list'>
-                <li onClick ={() =>{setMenu("home")}}><Link style ={{textDecoration:"none"}} to="/">Home</Link> {menu ==="home" ? <hr/>:<></>}</li>
-                <li onClick ={() =>{setMenu("mens")}}><Link style ={{textDecoration:"none"}} to="/mens">Mens</Link> {menu ==="mens" ? <hr/>:<></>}</li>
-                <li onClick ={() =>{setMenu("womens")}}><Link style ={{textDecoration:"none"}} to="/womens">Womens</Link> {menu ==="womens" ? <hr/>:<></>}</li>
-                <li onClick ={() =>{setMenu("kids")}}><Link style ={{textDecoration:"none"}} to="/kids">Kids</Link> {menu ==="kids" ? <hr/>:<></>}</li>
-            </ul>
-            <div className="login">
-                <Link to ="/login"><button>Login</button></Link>
-            </div>
-            <div className="cart">
-                <Link to="/cart"><img src={cart} alt="cart.jpeg" /></Link>
-                
-                <div className="zero">0</div>
-            </div>
-        </div>
-      
-    </div>
-  )
-}
+    <nav className="navbar">
+      <div className="logoimage">
+        <img src={logo} alt="logo" />
+        <p>Shopify</p>
+      </div>
 
-export default Navbar
+      <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+        <ul className='list'>
+          <li onClick={() => { setMenu("home"); closeMobileMenu(); }}>
+            <Link to="/">Home</Link>
+            {menu === "home" && <hr />}
+          </li>
+          <li onClick={() => { setMenu("mens"); closeMobileMenu(); }}>
+            <Link to="/mens">Mens</Link>
+            {menu === "mens" && <hr />}
+          </li>
+          <li onClick={() => { setMenu("womens"); closeMobileMenu(); }}>
+            <Link to="/womens">Womens</Link>
+            {menu === "womens" && <hr />}
+          </li>
+          <li onClick={() => { setMenu("kids"); closeMobileMenu(); }}>
+            <Link to="/kids">Kids</Link>
+            {menu === "kids" && <hr />}
+          </li>
+        </ul>
+        <div className="nav-actions">
+          <Link to="/login" className="login-btn" onClick={closeMobileMenu}>
+            Login
+          </Link>
+          <Link to="/cart" className="cart">
+            <img src={cart} alt="cart" />
+            <div className="zero">0</div>
+          </Link>
+        </div>
+      </div>
+
+      <div className="hamburger" onClick={toggleMobileMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
